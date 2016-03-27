@@ -4,8 +4,9 @@
 #include <vector>
 
 
-struct Entity
+class Entity
 {
+public:
 	Entity(unsigned int _chrom_length);
 
 	void set(unsigned int _idx);

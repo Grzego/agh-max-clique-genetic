@@ -51,6 +51,8 @@ struct Vertex : public V, public std::unordered_map<int, E>
 	}
 };
 
+// -----
+
 template <typename V = Empty, typename E = Empty>
 class Graph : public std::unordered_map<int, typename Vertex<V, E>>
 {

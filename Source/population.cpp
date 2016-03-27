@@ -232,20 +232,10 @@ void Population::clique_optimizer(Entity &_offspring)
 		}
 	}
 	Graph<> sub = graph.extract_undirected(vertices);
-	/*while (!sub.is_clique()) {
-		std::vector<int> sorted = sub.sort_by_degree();
-		sub.erase(sorted.back());
-	}*/
 
 	while (!sub.is_clique()) {
 		sub.remove_undirected(sub.find_smallest_degree());
 	}
-
-	//while (!sub.is_clique()) {
-	//	std::vector<int> sorted = sub.sort_by_degree();
-	//	std::uniform_int_distribution<> dist(sorted.size() / 2, sorted.size() - 1);
-	//	sub.remove_undirected(sorted[dist(mersenne_twister)]);
-	//}
 
 	std::vector<int> clique = sub.vertices();
 

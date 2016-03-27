@@ -7,20 +7,8 @@
 #include <boost/python.hpp>
 #include <boost/python/suite/indexing/vector_indexing_suite.hpp>
 
-#include "genetic.h"
 #include "population.h"
 #include "graph.h"
-
-
-/* Deadline: 12.06.2015
-
-1. Opis problemu
-2. Literatura (algorytmy rozwiazujace problem)
-3. Testy (poprawnosciowe, wydajnosciowe)
-4. Analiza wynikow
-5. Podsumowanie (poprawa, problemy, diagram klas i kod)
-
-*/
 
 
 BOOST_PYTHON_MODULE(genetics)
@@ -61,7 +49,5 @@ BOOST_PYTHON_MODULE(genetics)
 
 int main()
 {
-	//genetic::run();
-	//std::cin.ignore(2);
 	return 0;
 }
